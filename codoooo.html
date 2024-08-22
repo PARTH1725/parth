@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>First Class Html</title>
+  <link rel="icon" type="image/png" href="simple-twitter-16x16-icon-png-7.png" />
+  <style>
+    label {
+      font-size: 50px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    body {
+      color: maroon;
+      font-weight: 1000;
+      margin: 0;
+      background-color: blanchedalmond;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    #header {
+      background: black;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    #container {
+      display: flex;
+      position: relative;
+      flex: 1;
+    }
+
+    #sidebar {
+      background: greenyellow;
+      width: 300px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #main {
+      width: 65%;
+      padding: 20px;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+      gap: 20px;
+    }
+
+    .grid-item {
+      background: white;
+      color: brown;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(red, green, blue, alpha)
+    }
+
+    #chatbox {
+      position: absolute;
+      width: 100px;
+      display: flex;
+      background-color: crimson;
+      border-radius: 100%;
+      z-index: 0;
+      bottom: 5%;
+      right: 5%;
+      z-index: 20;
+    }
+
+    #messagebox {
+      padding: 200px;
+    }
+
+    #messagebox:hover {
+      padding: 30px;
+    }
+
+    #fixeddiv {
+      position: fixed;
+      background-color: olivedrab;
+      display: flex;
+      border-radius: 100%;
+      width: 100px;
+      bottom: 5%;
+      right: 5%;
+      height: 100px;
+      z-index: 21;
+    }
+
+    /*    
+      Important CSS properties 
+      height
+      width
+      margin
+      padding
+      display
+      position
+      left, top, botm, right
+      links
+      table
+      icon
+      border
+      box
+      pseudo elemens
+      align */
+
+
+    /*function example of math f =(x) takes input and gives output */
+  </style>
+</head>
+
+<body>
+
+  <div id="header">
+    <h1>Header</h1>
+  </div>
+  <div id="container">
+    <div id="chatbox">
+      <div id="messagebox">
+        <i></i>
+        Messages
+      </div>
+    </div>
+    <div id="sidebar">
+      <h1>sidebar</h1>
+    </div>
+    <div id="main">
+      <div id="fixedDiv">
+      </div>
+      <div class="grid-item">
+        <h1>Testing</h1>
+        <p>this our first class for the introduction of HTML</p>
+        <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+        <a href="https://www.w3schools.com" target="_blank">visit w3schools.com!</a>
+        <a href="javascript:alert('Hello World!');">Execute javascript</a>
+        <hr />
+        <form>
+          <label> First Name </label>
+          <input type="text" name="firstName" />
+          <label> Phone </label>
+          <input type="number" name="phone" />
+          <button type="submit"
+            style="background-color: blue; color:darkgoldenrod; padding: 10px; border: none; border-radius: 5px;">submit</button>
+          <button type="reset"
+            style="background-color:red; color: whitesmoke; padding: 10px; border: none; border-radius:  5px;">Reset</button>
+        </form>
+      </div>
+      <div class="grid-item">
+        <h1>Testing</h1>
+        <p>this our first class for the introduction of HTML</p>
+        <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+        <a href="https://www.w3schools.com" target="_blank">visit w3schools.com!</a>
+        <a href="javascript:alert('Hello World!');">Execute javascript</a>
+        <hr />
+        <form>
+          <label> first Name</label>
+          <input type="text" name="firstName" />
+          <label>phone</label>
+          <input type="number" name="phone" />
+          <button type="submit"
+            style="background-color: blue; color:darkgoldenrod; padding: 10px; border: none; border-radius: 5px;">submit</button>
+          <button type="reset"
+            style="background-color:red; color: whitesmoke; padding: 10px; border: none; border-radius:  5px;">Reset</button>
+        </form>
+      </div>
+      <div class="grid-item">
+        <h1>Testing</h1>
+        <p>this our first class for the introduction of HTML</p>
+        <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+        <a href="https://www.w3schools.com" target="_blank">Visit W3Schools.com!</a>
+        <a href="javascript:alert('Hello World!');">Execute JavaScript</a>
+        <hr />
+        <form>
+          <label> first Name</label>
+          <input type="text" name="firstName" />
+          <label>phone</label>
+          <input type="number" name="phone" />
+          <button type="submit"
+            style="background-color: blue; color:darkgoldenrod; padding: 10px; border: none; border-radius: 5px;">submit</button>
+          <button type="reset"
+            style="background-color:red; color: whitesmoke; padding: 10px; border: none; border-radius:  5px;">Reset</button>
+        </form>
+      </div>
+      <div class="grid-item">
+        <h1>Testing</h1>
+        <p>this our first class for the introduction of HTML</p>
+        <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+        <a href="https://www.w3schools.com" target="_blank">Visit W3Schools.com!</a>
+        <a href="javascript:alert('Hello World!');">Execute JavaScript</a>
+        <hr />
+        <form>
+          <label>First Name</label>
+          <input type="text" name="firstName" />
+          <label>Phone</label>
+          <input type="number" name="phone" />
+          <button type="submit"
+            style="background-color: blue; color: white; padding: 10px; border: none; border-radius: 5px;">Submit</button>
+          <button type="reset"
+            style="background-color: red; color: white; padding: 10px; border: none; border-radius: 5px;">Reset</button>
+        </form>
+      </div>
+      <div class="grid-item">
+        <h1>Testing</h1>
+        <p>this our first class for the introduction of HTML</p>
+        <a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+        <a href="https://www.w3schools.com" target="_blank">Visit W3Schools.com!</a>
+        <a href="javascript:alert('Hello World!');">Execute JavaScript</a>
+        <hr />
+        <form>
+          <label> first Name</label>
+          <input type="text" name="firstName" />
+          <label>phone</label>
+          <input type="number" name="phone" />
+          <button type="submit"
+            style="background-color: blue; color:darkgoldenrod; padding: 10px; border: none; border-radius: 5px;">submit</button>
+          <button type="reset"
+            style="background-color:red; color: whitesmoke; padding: 10px; border: none; border-radius:  5px;">Reset</button>
+        </form>
+      </div>
+      <div class="grid-item">
+        <h1>Testing</h1>
+        <p>this our firstb class for the introduction of HTML</p>
+        <a href="https://www.w3schools>com">visit w3schools.com!</a>
+        <a href="htttps://www.w3schools.com"target="_blank">visit w3schools.com!</a>
+        <a href="javascript:alert('Hello world');" >Execute javascript</a>
+        <hr />
+        <form>
+          <label> first Name</label>
+          <input type="text" name="firstname" />
+          <label>phone</label>
+          <input type="number" name="phone" />
+          <button type="submit"
+          style="background-color: blue; color: blanchedalmond; padding: 10px; border: none; border-radius: 5px;">submit</button>
+          <button type="reset"
+             style="background-color: red; color: transparent; padding: 10x; border: none; border-radius:   5px;">Reset</button>
+        </form>
+        </div>
+      <!--add more grid items as needed-->
+    </div>
+  </div>
+</body>
+
+</html>
