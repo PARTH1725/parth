@@ -2,43 +2,118 @@
     <head>
         <title>First Class Html class</title>
         <link rel='stylesheet' href='style.css' />
-        <style>
-            .discount-price {
-                text-decoration: line-through;
-                color: red
-            }
-            .actual-price {
-                color: green;
-            }
- 
-            .paymentLabel {
-                display: flex;
-                align-items: center;
-            }
- 
- 
-        /* Style for radio buttons */
-        input[type="radio"] {
-            accent-color: blue; /* This sets the color of the radio button */
-        }
- 
-        .paymentLabel input[type="radio"] {
-            margin-right: 10px; /* Add some space between the radio button and the label */
-        }
- 
-        </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'blue': {
+                   DEFAULT: '#3B82F6',
+                     50: '#D5E4FD',
+                    100: '#C4D9FC',
+                    200: '#A1C3FB',
+                    300: '#7FAEF9',
+                    400: '#5D98F8',
+                    500: '#3B82F6',
+                    600: '#0B61EE',
+                    700: '#084BB8',
+                    800: '#063583',
+                    900: '#041F4D',
+                    950: '#021532',
+            },
+                'french-rose': {
+                   DEFAULT: '#EC4899',
+                    50: '#FDEEF6',
+                    100: '#FBDCEB',
+                    200: '#F8B7D7',
+                    300: '#F492C2',
+                    400: '#F06DAE',
+                    500: '#EC4899',
+                    600: '#E4187D',
+                    700: '#B11261',
+                    800: '#7F0D45',
+                    900: '#4C0829',
+                     950: '#32051B'
+                },
+                   'half-baked': {
+                 DEFAULT: '#87BDCB',
+                 50: '#E7F5F0',
+                 100: '#DDF0EB',
+                 200: '#C7E7E2',
+                 300: '#B2DDDC',
+                 400: '#9DCFD4',
+                 500: '#87BDCB',
+                 600: '#5697B5',
+                 700: '#3C6688',
+                 800: '#263B56',
+                 900: '#101724',
+                 950: '#05070C'
+                },                
+                  'red': {
+                 DEFAULT: '#EB0000',
+                 50: '#FFA3A3',
+                 100: '#FF8F8F',
+                  200: '#FF6666',
+                 300: '#FF3D3D',
+                 400: '#FF1414',
+                 500: '#EB0000',
+                 600: '#B30000',
+                 700: '#7A0000',
+                 800: '#420000',
+                 900: '#0A0000',
+                 950: '#000000'
+                },
+                  'vista-blue': {
+                 DEFAULT: '#96D9A6',
+                  50: '#96D9A6',
+                 100: '#96D9AB',
+                 200: '#96D9B6',
+                 300: '#96D9C2',
+                 400: '#96D9CD',
+                 500: '#96D9D8',
+                 600: '#96CFD9',
+                 700: '#96C4D9',
+                 800: '#96B9D9',
+                 900: '#96AED9',
+                 950: '#96A8D9'
+                }, 
+                 'blue-chalk': {
+                 DEFAULT: '#F8E5FF',
+                 50: '#F8E5FF',
+                 100: '#FAE5FF',
+                 200: '#FEE5FF',
+                 300: '#FFE5FC',
+                 400: '#FFE5F7',
+                 500: '#FFE5F3',
+                 600: '#FFE5EF',
+                 700: '#FFE5EB',
+                 800: '#FFE5E6',
+                 900: '#FFE9E5',
+                 950: '#FFEBE5'
+                },
+
+
+            }           
+          }
+        } 
+      }
+  </script>
     </head>
- 
-    <body>    
-        <div id='header' class='slideDown'>
-          <h1>Header</h1>
+
+    <body class="bg-red-200 flex-col text-blue-500 h-svh">
+        <div class="bg-vista-blue-100 p-4">
+            <h1 class="text-blue-chalk-500 text-4xl">Header</h1>
         </div>
-        <div id='container'>
-          <div id='sidebar'>
-            <h1>Sidebar</h1>
+        <div id='container' class="flex grow flex-column">
+            <div class="w-32 box-border p-4 bg bg-red-200">
+                  <h1 class="text-blue-100 text-4xl">Sidebar</h1>
+            </div>
           </div>
-          <div id='mainBox' style='display: flex; width: 100%; gap:10px'>
-            <div class='grid-item slideDown' style='width: 30%;'>
+          <div id='mainBox' class="flex grow flex-column"></div>
+            <div class='bg-red-100 text-black-500 p-4 rounded-md shadow-2xl slideDown'style='width: 30%;'>
                 <form id='taskForm' onsubmit='event.preventDefault();' style='display: flex; flex-direction:column; gap: 4px; '>
                   <label>Checkout Form</label>
                   <input type='text' name='first_name' required id='first_name' placeholder="Enter you first_name"/>
