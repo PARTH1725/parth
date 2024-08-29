@@ -1,10 +1,11 @@
 <html>
     <head>
         <title>First Class Html class</title>
-        <link rel='stylesheet' href='style.css' />
+        
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
   <script>
     tailwind.config = {
       theme: {
@@ -24,7 +25,7 @@
                     900: '#041F4D',
                     950: '#021532',
             },
-                'french-rose': {
+                'pink': {
                    DEFAULT: '#EC4899',
                     50: '#FDEEF6',
                     100: '#FBDCEB',
@@ -94,7 +95,78 @@
                  900: '#FFE9E5',
                  950: '#FFEBE5'
                 },
+                  'pale-sky': {
+            DEFAULT: '#6B7280',
+               50: '#E3E5E8',
+              100: '#D8DADF',
+              200: '#C2C5CC',
+              300: '#ACB0BA',
+              400: '#969BA7',
+              500: '#7F8694',
+              600: '#6B7280',
+              700: '#515761',
+              800: '#383C43',
+              900: '#1E2024',
+              950: '#121315'
+       },
 
+             'buttercup': {
+          DEFAULT: '#F59E0B',
+              50: '#FEEEE3',
+             100: '#FDE3CF',
+             200: '#FBCFA8',
+             300: '#FABE81',
+             400: '#F8B059',
+             500: '#F7A632',
+             600: '#F59E0B',
+             700: '#CF8D08',
+             800: '#A87907',
+             900: '#806105',
+             950: '#6D5504'
+        },
+
+         'pale-sky': {
+          DEFAULT: '#6B7280',
+          50: '#E3E5E8',
+         100: '#D8DADF',
+         200: '#C2C5CC',
+         300: '#ACB0BA',
+         400: '#969BA7',
+         500: '#7F8694',
+         600: '#6B7280',
+         700: '#515761',
+         800: '#383C43',
+         900: '#1E2024',
+         950: '#121315'
+        },
+        'green': {
+          DEFAULT: '#1FAD23',
+          50: '#97ED9A',
+         100: '#86EA89',
+         200: '#63E367',
+         300: '#40DD45',
+         400: '#25D02A',
+         500: '#1FAD23',
+         600: '#167E1A',
+         700: '#0E4E10',
+         800: '#051E06',
+         900: '#000000',
+         950: '#000000'
+},
+         'black': {
+         DEFAULT: '#000000',
+         50: '#5C5C5C',
+         100: '#525252',
+         200: '#3D3D3D',
+         300: '#292929',
+         400: '#141414',
+         500: '#000000',
+         600: '#000000',
+         700: '#000000',
+         800: '#000000',
+         900: '#000000',
+         950: '#000000'
+   }
 
             }           
           }
@@ -103,32 +175,31 @@
   </script>
     </head>
 
-    <body class="bg-red-200 flex-col text-blue-500 h-svh">
-        <div class="bg-vista-blue-100 p-4">
-            <h1 class="text-blue-chalk-500 text-4xl">Header</h1>
+    <body class="bg-pale-sky-900 flex flex-col text-white-500 h-svh">
+        <div class="bg-green-200 p-4 ">
+            <h1 class="text-blue-chalk-950 text-4xl w-20">Header</h1>
         </div>
         <div id='container' class="flex grow flex-column">
-            <div class="w-32 box-border p-4 bg bg-red-200">
-                  <h1 class="text-blue-100 text-4xl">Sidebar</h1>
+            <div class="w-100 box-border p-5  bg-black-900;">
+                <h1 class="text-blue-chalk-900 text-4xl">Sidebar</h1>
             </div>
-          </div>
-          <div id='mainBox' class="flex grow flex-column"></div>
-            <div class='bg-red-100 text-black-500 p-4 rounded-md shadow-2xl slideDown'style='width: 30%;'>
-                <form id='taskForm' onsubmit='event.preventDefault();' style='display: flex; flex-direction:column; gap: 4px; '>
-                  <label>Checkout Form</label>
-                  <input type='text' name='first_name' required id='first_name' placeholder="Enter you first_name"/>
-                  <span style='color:red;' hidden id='taskErrorField-first_name'>This field is required</span>
-                  <input type='text' name='last_name' required id='last_name' placeholder="Enter you last_name"/>
-                  <span style='color:red;' hidden id='taskErrorField-last_name'>This field is required</span>
-                  <input type='tel' name='number' required id='number' placeholder="Enter you phone_number"/>
-                  <span style='color:red;' hidden id='taskErrorField-number'>This field is required</span>
-                  <textarea id="address" name="address" placeholder="enter your full address"></textarea>
-                  <span style='color:red;' hidden id='taskErrorField-address'>This field is required</span>
-                  <input type='text' name='email' required id='email' placeholder="Enter you email"/>
-                  <span style='color:red;' hidden id='taskErrorField-email'>This field is required</span>
-                  <input type='text' name='postal_code' required id='postal_code' placeholder="Enter you postal_code"/>
-                  <span style='color:red;' hidden id='taskErrorField-postal_code'>This field is required</span>
-                  <select id="city" name="city">
+            <div id='mainBox' class='flex-1 flex gap-30p-6 bg-black-300'>
+                <div class=' bg-green-200 grid-item slideDown text-1xl text-black-900' style='width: 30%;'>
+                    <form id='taskForm' onsubmit='event.preventDefault();' style='display: flex; flex-direction:column; gap: 4px;'>
+                      <label>Checkout Form</label>
+                      <input type='text' name='first_name' required id='first_name' placeholder="Enter you first_name"/>
+                      <span style='color:#E71414;' hidden id='taskErrorField-first_name'>This field is required</span>
+                      <input type='text' name='last_name' required id='last_name' placeholder="Enter you last_name"/>
+                      <span style='color:#E71414;' hidden id='taskErrorField-last_name'>This field is required</span>
+                      <input type='tel' name='number' required id='number' placeholder="Enter you phone_number"/>
+                      <span style='color:#E71414;' hidden id='taskErrorField-number'>This field is required</span>
+                      <textarea id="address" name="address" placeholder="enter your full address"></textarea>
+                      <span style='color:#E71414;' hidden id='taskErrorField-address'>This field is required</span>
+                      <input type='text' name='email' required id='email' placeholder="Enter you email"/>
+                      <span style='color:#E71414;' hidden id='taskErrorField-email'>This field is required</span>
+                      <input type='text' name='postal_code' required id='postal_code' placeholder="Enter you postal_code"/>
+                      <span style='color:#E71414;' hidden id='taskErrorField-postal_code'>This field is required</span>
+                      <select id="city" name="city">
                     <option selected>Karachi</option>
                     <option >Lahore</option>
                     <option >Islamabed</option>
@@ -150,11 +221,11 @@
                         Online Payment
                     </label>
                   </div>
-                  <button type='button' onclick="sumbitCheckout()" id='submitBtn' class='submitBtn' style='background-color: blue; color: white; padding: 10px; border: none; border-radius: 5px;'>Checkout</button>
+                  <button type='button' onclick="sumbitCheckout()" id='submitBtn' class='submitBtn' style='background-color: black; color: white; padding: 10px; border: none; border-radius: 5px;'>Checkout</button>
                 </form>
                 <div>
                   <label>Cart Details</label>
-                  <div id="boxList"  style="width: 80%; display: flex; flex-direction: column; gap: 4px;" class="grid-item slideDown">
+                  <div id="boxList "  style="width: 80%; display: flex; flex-direction: column; gap: 4px;" class="grid-item slideDown">
  
                   </div>
                 </div>
@@ -234,7 +305,7 @@
             {
                 id: 4,
                 name: 'Redmi 13c',
-                description: 'color blue, storage: 120gb ram: 2gb display: 6x4',
+                description: 'color blue, storage: 120gb ram: 2gb,',
                 price: 25000,
                 discounted_price: 24999,
             },
@@ -508,95 +579,55 @@ console.log(result); // 10
         }
  
         function renderCarts() {
-    let cartHtml = '';
-    let totalAmount = 0;
-    var cartDiv = document.getElementById('boxList');
- 
- 
-    checkoutForm.cart_details.forEach((x) => {
-        var priceBox = x.discounted_price < x.price ? `<div class='actual-price'>
-                <span class='discount-price'> `+x.price+`</span>
-                `+x.discounted_price+`
-            </div>` : `<div class='actual-price'>
-                `+x.price+`
-            </div>` ;
- 
-        // Calculate the total amount for each item
-        const itemTotal = showTotalAmount(x.discounted_price < x.price ? x.discounted_price : x.price, x.quantity);
-        totalAmount += itemTotal;
- 
-        cartHtml += `<div class="box" style="background-color: aqua;">
-            <div style="padding-left:10px; border-radius: 50%; padding-right: 10px; display:flex; justify-content: space-between; align-items: center;">
-                <p>`+ x.name +`</p>
-                `+ priceBox +`
-                <div>
-                    Quantity `+ x.quantity +`
-                </div>
-                <div>
-                    <button onclick="removeItemCart(`+ x.id +`)">
-                        X
-                    </button>
-                </div>
-            </div>
-        </div>`;
-    });
- 
-    // Add total amount to the HTML
-    cartHtml += `<div class="total-amount" style="padding: 10px; font-size: 18px; font-weight: bold; background-color: #f0f0f0;">
-        Total Amount: ` + totalAmount + `
-    </div>`;
- 
-    cartDiv.innerHTML = cartHtml;
- 
-}
- 
- 
-        function renderProducts() {
-            let productHtml = '';
-            var productDiv = document.getElementById('main');
- 
-            products.forEach((x) => {
-                var priceBox = x.discounted_price < x.price ? `<div class='actual-price'>
-                        <span class='discount-price'> `+x.price+`</span>
-                        `+x.discounted_price+`
-                    </div>` : `<div class='actual-price'>
-                        `+x.price+`
+        let cartHtml = '';
+        var cartDiv = document.getElementById('boxList');
+        checkoutForm.cart_details.forEach((x) => {
+            var priceBox = x.discounted_price < x.price ? `<div class='text-seaGreen-500'>
+                        <span class='text-red-600 line-through'> `+ x.price + `</span>
+                        `+ x.discounted_price + `
+                    </div>` : `<div class='text-seaGreen-500'>
+                        `+ x.price + `
                     </div>` ;
- 
- 
-                productHtml += `<div class='grid-item slideDown'>
-                    <h1>`+ x.name +`</h1>
-                    <p>`+ x.description +`</p>
-                    `+ priceBox +`
-                    <div class='addToCartBox'>
-                        <input type='number' id='qty`+ x.id +`'/>
-                        <button onclick='addToCart(`+x.id+`)'>Add to Cart</button>
- 
+
+            cartHtml += `<div class="box bg-red-50 font-medium text-black-900">
+                    <div style="padding-left:10px; border-radius: 50%; padding-right: 10px; display:flex; justify-content: space-between; align-items: center;">
+                        <p >`+ x.name + `</p>
+                        `+ priceBox + `
+                        <div>
+                            Quantity `+ x.quantity + `
+                        </div>
+                        <div>
+                            <button class="text-red-500" onclick="removeItemCart(`+ x.id + `)">
+                                X
+                            </button>
+                        </div>
                     </div>
-                </div>`; 
-            });
-            productDiv.innerHTML = productHtml;
-        }
- 
-    function addToCart(product) {
-        var currentProduct = products.find((x) => x.id === product);
-        var currentQty = document.getElementById('qty'+product).value || 1;
-        var cartExistIndex = checkoutForm.cart_details.findIndex((x)=> x.id === product);
-        if(cartExistIndex !== -1) {
-            checkoutForm.cart_details[cartExistIndex].quantity += parseInt(currentQty);
-        } else {                
-            var cartItem = { ...currentProduct, quantity: currentQty };
-            checkoutForm.cart_details.push(cartItem);
-        }
-        document.getElementById('qty'+product).value = '';
-        renderCarts();
+                </div>`;
+        });
+        cartDiv.innerHTML = cartHtml;
     }
- 
-    function removeItemCart(id) {
-        var proIndex = checkoutForm.cart_details.findIndex((x) => x.id === id);
-        checkoutForm.cart_details.splice(proIndex, 1);
-        renderCarts();
+    function renderProducts() {
+        let productHtml = '';
+        var productDiv = document.getElementById('main');
+        products.forEach((x) => {
+            var priceBox = x.discounted_price < x.price ? `<div class='text-blue-chalk-500'>
+                        <span class='text-black-600 line-through'> `+ x.price + `</span>
+                        `+ x.discounted_price + `
+                    </div>` : `<div class='text-blue-500'>
+                        `+ x.price + `
+                    </div>` ;
+            productHtml += `<div class='bg-green-200 text-black-500 p-3 rounded-md shadow-2xl slideDown'>
+                    <h1 class='font-bold'>`+ x.name + `</h1>
+                    <p class='font-medium'>`+ x.description + `</p>
+                    `+ priceBox + `
+                    <div class=''>
+                        <input type='number' id='qty`+ x.id + `'/>
+                        <button class='bg-black-800 text-green-200 font-medium rounded-lg w-32 py-1' onclick='addToCart(`+ x.id + `)'>Add to Cart</button>
+
+                    </div>
+                </div>`;
+        });
+        productDiv.innerHTML = productHtml;
     }
-    </script>
+</script>
 </html>
- 
